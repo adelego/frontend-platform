@@ -1,1 +1,1 @@
-export * from './frontendSearch';
+export * from 'components';
