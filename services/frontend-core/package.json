@@ -1,0 +1,44 @@
+{
+  "name": "@frontend-platform/frontend-core",
+  "private": true,
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "deploy": "serverless deploy",
+    "deploy-production": "serverless deploy --stage production",
+    "deploy-staging": "serverless deploy --stage staging",
+    "destroy": "serverless remove",
+    "destroy-production": "serverless remove --stage production",
+    "destroy-staging": "serverless remove --stage staging",
+    "format-check": "prettier --check . ../../.prettierignore",
+    "format-fix": "prettier --write . ../../.prettierignore",
+    "lint-fix": "pnpm linter-base-config --fix",
+    "lint-fix-all": "pnpm lint-fix .",
+    "linter-base-config": "eslint --ext=js,ts",
+    "test": "nx run format-check && nx run test-linter && nx run test-type && nx run test-unit && nx run test-circular",
+    "test-circular": "pnpm depcruise --validate .dependency-cruiser.js .",
+    "test-linter": "pnpm linter-base-config .",
+    "test-type": "tsc",
+    "test-unit": "vitest run --coverage --passWithNoTests"
+  },
+  "dependencies": {
+    "@frontend-platform/serverless-configuration": "workspace:^",
+    "@swarmion/serverless-helpers": "^0.28.2"
+  },
+  "devDependencies": {
+    "@serverless/typescript": "^3.30.1",
+    "@types/node": "^20.5.0",
+    "@vitest/coverage-c8": "0.30.0",
+    "dependency-cruiser": "^13.1.3",
+    "esbuild": "^0.19.2",
+    "eslint": "^8.47.0",
+    "serverless": "^3.34.0",
+    "serverless-custom-iam-roles-per-function": "^1.0.1",
+    "serverless-esbuild": "^1.46.0",
+    "serverless-iam-roles-per-function": "^3.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2",
+    "vite-tsconfig-paths": "^4.2.0",
+    "vitest": "0.30.0"
+  }
+}
