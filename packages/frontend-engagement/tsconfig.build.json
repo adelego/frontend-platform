@@ -4,8 +4,9 @@
     "baseUrl": "src",
     "rootDir": "src",
     "outDir": "./dist/types",
-    "tsBuildInfoFile": "tsconfig.build.tsbuildinfo"
+    "tsBuildInfoFile": "tsconfig.build.tsbuildinfo",
+    "jsx": "preserve"
   },
-  "include": ["./**/*.ts"],
+  "include": ["./**/*.ts", "./**/*.tsx"],
   "exclude": ["./vite*", "./**/*.test.ts", "./dist", "./tsup.config.ts"]
 }

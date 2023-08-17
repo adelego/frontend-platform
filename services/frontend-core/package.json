@@ -19,7 +19,8 @@
     "test-unit": "vitest run --coverage --passWithNoTests"
   },
   "dependencies": {
-    "@frontend-platform/frontend-search": "^1.0.0",
+    "@frontend-platform/frontend-engagement": "workspace:^",
+    "@frontend-platform/frontend-search": "workspace:^",
     "@frontend-platform/serverless-configuration": "workspace:^",
     "@swarmion/serverless-helpers": "^0.28.2",
     "next": "13.4.17",

@@ -108,10 +108,29 @@ importers:
         version: 0.30.0
 
   packages/frontend-engagement:
+    dependencies:
+      next:
+        specifier: 13.4.17
+        version: 13.4.17(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+      tailwindcss:
+        specifier: 3.3.3
+        version: 3.3.3(ts-node@10.9.1)
     devDependencies:
       '@types/node':
         specifier: ^20.5.0
         version: 20.5.0
+      '@types/react':
+        specifier: 18.2.20
+        version: 18.2.20
+      '@types/react-dom':
+        specifier: 18.2.7
+        version: 18.2.7
       '@vitest/coverage-c8':
         specifier: 0.30.0
         version: 0.30.0(vitest@0.30.0)
@@ -258,8 +277,11 @@ importers:
 
   services/frontend-core:
     dependencies:
+      '@frontend-platform/frontend-engagement':
+        specifier: workspace:^
+        version: link:../../packages/frontend-engagement
       '@frontend-platform/frontend-search':
-        specifier: ^1.0.0
+        specifier: workspace:^
         version: link:../../packages/frontend-search
       '@frontend-platform/serverless-configuration':
         specifier: workspace:^
