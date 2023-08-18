@@ -1,9 +1,14 @@
 {
   "extends": "../../tsconfig.options.json",
   "compilerOptions": {
+    "lib": ["es5", "es6", "dom"],
     "baseUrl": "src",
-    "jsx": "preserve"
+    "jsx": "react",
+    "outDir": "dist",
+    "noEmit": false,
+    "emitDeclarationOnly": false,
+    "declarationDir": "./dist/types"
   },
   "include": ["./**/*.ts", "./**/*.tsx"],
-  "exclude": ["./dist"]
+  "exclude": ["./dist", "./node_modules", "vitest.config.ts"]
 }

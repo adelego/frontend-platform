@@ -4,4 +4,4 @@ const SearchBar = (): JSX.Element => {
   return <div>🔎 Search Bar</div>;
 };
 
-export { SearchBar };
+export default SearchBar;
