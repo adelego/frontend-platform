@@ -2,6 +2,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const { ModuleFederationPlugin } = require('webpack').container;
 
+const deps = require('./package.json').dependencies;
+
 module.exports = {
   entry: './src/index.tsx',
   mode: 'development',
@@ -39,14 +41,16 @@ module.exports = {
       },
       shared: {
         react: {
+          requiredVersion: deps.react,
           singleton: true,
-          version: '0',
-          requiredVersion: false,
         },
         'react-dom': {
-          requiredVersion: false,
+          requiredVersion: deps['react-dom'],
           singleton: true,
-          version: '0',
+        },
+        tailwind: {
+          requiredVersion: deps.tailwind,
+          singleton: true,
         },
       },
     }),
