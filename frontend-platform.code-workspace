@@ -99,6 +99,10 @@
     {
       "path": "packages/frontend-design-system",
       "name": "frontend design system [library]"
+    },
+    {
+      "path": "services/frontend-search",
+      "name": "frontend search [service]"
     }
   ]
 }

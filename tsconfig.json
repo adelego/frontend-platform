@@ -6,22 +6,16 @@
       "path": "./packages/serverless-configuration/tsconfig.build.json"
     },
     {
-      "path": "./packages/frontend/tsconfig.build.json"
-    },
-    {
-      "path": "./packages/frontend-search/tsconfig.build.json"
-    },
-    {
       "path": "./packages/frontend-engagement/tsconfig.build.json"
-    },
-    {
-      "path": "./services/frontend/tsconfig.json"
     },
     {
       "path": "./services/frontend-core/tsconfig.json"
     },
     {
       "path": "./packages/frontend-design-system/tsconfig.build.json"
+    },
+    {
+      "path": "./services/frontend-search/tsconfig.json"
     }
   ]
 }

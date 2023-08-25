@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const SearchBar = (): JSX.Element => {
+const SearchBar = (): React.JSX.Element => {
   return <div>🔎 Search Bar</div>;
 };
 

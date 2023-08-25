@@ -2,9 +2,8 @@ import dynamic from 'next/dynamic';
 import React from 'react';
 
 import { HomeHero } from '@frontend-platform/frontend-engagement';
-const SearchBar = dynamic(() => import('search/SearchBar'), {
-  ssr: false,
-});
+
+const SearchBar = dynamic(() => import('search/SearchBar'));
 
 const Home = (): JSX.Element => (
   <main className="flex min-h-screen flex-col items-center justify-between p-24">
