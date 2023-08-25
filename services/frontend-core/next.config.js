@@ -1,11 +1,11 @@
-/** @type {import('next').NextConfig} */
 const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
+require('dotenv').config();
 
 const remotes = isServer => {
   const location = isServer ? 'ssr' : 'chunks';
 
   return {
-    search: `search@http://localhost:3001/_next/static/${location}/remoteEntry.js`,
+    search: `search@${process.env.SEARCH_REMOTE_URL}/_next/static/${location}/remoteEntry.js`,
   };
 };
 

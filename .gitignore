@@ -48,3 +48,7 @@ nx-cache
 
 # CDK output
 **/cdk.out
+
+**/.open-next
+
+**/.sst

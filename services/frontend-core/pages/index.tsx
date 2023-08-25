@@ -3,7 +3,10 @@ import React from 'react';
 
 import { HomeHero } from '@frontend-platform/frontend-engagement';
 
-const SearchBar = dynamic(() => import('search/SearchBar'));
+const SearchBar = dynamic(
+  () => import('search/SearchBar'),
+  // eslint-disable-next-line @typescript-eslint/ban-types
+) as unknown as React.FunctionComponent;
 
 const Home = (): JSX.Element => (
   <main className="flex min-h-screen flex-col items-center justify-between p-24">

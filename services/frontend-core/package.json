@@ -5,6 +5,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "next build",
+    "deploy": "sst deploy",
+    "deploy:dev": "sst deploy --stage dev",
     "dev": "sst bind next dev",
     "format-check": "prettier --check . ../../.prettierignore",
     "format-fix": "prettier --write . ../../.prettierignore",
@@ -32,8 +34,8 @@
   "devDependencies": {
     "@serverless/typescript": "^3.30.1",
     "@types/node": "^20.5.0",
-    "@types/react": "18.2.20",
-    "@types/react-dom": "18.2.7",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
     "@vitest/coverage-c8": "0.30.0",
     "autoprefixer": "10.4.15",
     "aws-cdk-lib": "2.91.0",
@@ -52,5 +54,9 @@
     "typescript": "^5.0.2",
     "vite-tsconfig-paths": "^4.2.0",
     "vitest": "0.30.0"
+  },
+  "resolutions": {
+    "**/@types/react": "^18.2.20",
+    "**/@types/react-dom": "^18.2.7"
   }
 }
