@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 
-import SearchBar from '@/components/SearchBar';
+import { SearchBar } from '@/components/SearchBar';
 
 const inter = Inter({ subsets: ['latin'] });
 

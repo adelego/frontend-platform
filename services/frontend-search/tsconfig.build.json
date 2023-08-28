@@ -1,0 +1,25 @@
+{
+  "extends": "../../tsconfig.options.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "outDir": "./dist/types",
+    "tsBuildInfoFile": "tsconfig.build.tsbuildinfo",
+    "jsx": "preserve",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "sourceMap": true
+  },
+  "include": ["./**/*.ts", "./**/*.tsx"],
+  "exclude": [
+    "./vite*",
+    "./**/*.test.ts",
+    "./dist",
+    "./tsup.config.ts",
+    "./.sst",
+    "./.open-next",
+    "./.next"
+  ],
+  "references": []
+}

@@ -1,7 +1,13 @@
 import * as React from 'react';
 
-const SearchBar = (): React.JSX.Element => {
-  return <div>🔎 Search Bar</div>;
-};
+export interface SearchBarProps {
+  lang?: 'en' | 'fr';
+}
 
-export default SearchBar;
+export type SearchBarType = React.FC<SearchBarProps>;
+
+export const SearchBar: SearchBarType = ({ lang }) => {
+  const text = lang === 'fr' ? 'Barre de Recherche' : 'Search Bar';
+
+  return <div>🔎 {text}</div>;
+};
