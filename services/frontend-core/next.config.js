@@ -9,7 +9,7 @@ const remotes = isServer => {
   const location = isServer ? 'ssr' : 'chunks';
 
   return {
-    search: `search@${process.env.SEARCH_REMOTE_URL}/_next/static/${location}/remoteEntry.js`,
+    'frontend-search': `frontend-search@${process.env.SEARCH_REMOTE_URL}/_next/static/${location}/remoteEntry.js`,
   };
 };
 

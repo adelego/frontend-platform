@@ -4,10 +4,10 @@ module.exports = {
   webpack: config => {
     config.plugins.push(
       new NextFederationPlugin({
-        name: 'search',
+        name: 'frontend-search',
         filename: 'static/chunks/remoteEntry.js',
         exposes: {
-          './SearchBar': './components/SearchBar',
+          './components': './components',
         },
         shared: {},
         extraOptions: {
