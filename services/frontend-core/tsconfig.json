@@ -12,11 +12,17 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "paths": {
+      "frontend-search/*": ["../frontend-search/*"]
+    }
   },
   "references": [
     {
       "path": "../../packages/serverless-configuration/tsconfig.build.json"
+    },
+    {
+      "path": "../frontend-search/tsconfig.build.json"
     }
   ],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
