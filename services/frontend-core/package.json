@@ -7,7 +7,7 @@
     "build": "next build",
     "deploy": "sst deploy",
     "deploy:dev": "sst deploy --stage dev",
-    "dev": "sst bind next dev",
+    "dev": "PORT=3000 sst bind next dev",
     "format-check": "prettier --check . ../../.prettierignore",
     "format-fix": "prettier --write . ../../.prettierignore",
     "lint-fix": "pnpm linter-base-config --fix",
