@@ -2,6 +2,10 @@ const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
 require('dotenv').config();
 
 const remotes = isServer => {
+  /**
+   * creates remotes url depending on context (server side or client side)
+   */
+
   const location = isServer ? 'ssr' : 'chunks';
 
   return {
