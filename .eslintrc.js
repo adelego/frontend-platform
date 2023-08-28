@@ -158,18 +158,6 @@ module.exports = {
         '@typescript-eslint/ban-types': [
           'error',
           {
-            types: {
-              FC: 'Use `const MyComponent = (props: Props): JSX.Element` instead',
-              SFC: 'Use `const MyComponent = (props: Props): JSX.Element` instead',
-              FunctionComponent:
-                'Use `const MyComponent = (props: Props): JSX.Element` instead',
-              'React.FC':
-                'Use `const MyComponent = (props: Props): JSX.Element` instead',
-              'React.SFC':
-                'Use `const MyComponent = (props: Props): JSX.Element` instead',
-              'React.FunctionComponent':
-                'Use `const MyComponent = (props: Props): JSX.Element` instead',
-            },
             extendDefaults: true,
           },
         ],
