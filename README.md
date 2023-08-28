@@ -24,4 +24,11 @@ Todo
 
 ## Type sharing
 
-Todo
+Types are shared between search and core to make sure developer have access to type checking when they are developing, running CI, building the code.
+To achieve this, I have used [Typescript References](https://www.typescriptlang.org/docs/handbook/project-references.html). A [build typescript configuration](services/frontend-search/tsconfig.build.json) is defined inside frontend-search project. It allows me to emit type files when needed without overriding Next's typescript config. An empty reference is added
+Inside [core typescript configuration](services/frontend-search/tsconfig.json), I have added:
+
+- a reference to search ts build configuration
+- a path to avoid relative and long path
+
+Now Typescript can also resolve import from 'frontend-search' during transpilation, as well as module federation during build and runtime
