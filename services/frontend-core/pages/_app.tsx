@@ -6,6 +6,7 @@ import '../styles/globals.css';
 const App = ({ Component, pageProps }: AppProps): React.JSX.Element => {
   // eslint-disable-next-line @typescript-eslint/ban-types
   const AnyComponent = Component as React.FunctionComponent;
+  console.log('Test');
 
   return (
     <>
