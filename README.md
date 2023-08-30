@@ -18,6 +18,10 @@ In this templates, I have set up :
 For this to work, I have added in [Core's next config](services/frontend-core/next.config.js), the module federation plugin config that fetches the different micro-frontends.
 Then I have added in Search's Next config, a similar configuration that exposes Search components on a remote url. The component can then be imported in Core server side or client side.
 
+## Deployment
+
+The app is deployed on AWS with serverless services. I have used open-next and [SST](https://docs.sst.dev/start/nextjs) to deploy both the micro-service Search and the orchestrator Core app. Using environment file, I'm able to change the remote url for module federation to find Search micro service.
+
 ## Data fetching
 
 Todo
