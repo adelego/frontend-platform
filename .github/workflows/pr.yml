@@ -48,8 +48,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nx-cache-${{ steps.setup-node.outputs.node-version }}-
             ${{ runner.os }}-nx-cache-
-      - name: '🏗 Package'
+      - name: '🏗 Package types'
         run: pnpm nx affected --target=package --parallel=2
+      - name: '🏗 Package'
+        run: pnpm nx affected --target=package-types --parallel=2
       - name: '💄 Check format'
         run: pnpm format-check
       - name: '🧪 Run tests'
