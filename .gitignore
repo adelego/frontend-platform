@@ -2,9 +2,6 @@
 node_modules
 .npm
 
-# Serverless directories
-.serverless
-
 # Webpack directories
 .webpack
 
