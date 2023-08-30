@@ -21,11 +21,7 @@
       "@/*": ["./*"]
     }
   },
-  "references": [
-    {
-      "path": "../../packages/serverless-configuration/tsconfig.build.json"
-    }
-  ],
+  "references": [],
   "include": [
     "next-env.d.ts",
     "**/*.ts",

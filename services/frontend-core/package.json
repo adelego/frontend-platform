@@ -23,7 +23,6 @@
   "dependencies": {
     "@frontend-platform/frontend-engagement": "workspace:^",
     "@frontend-platform/frontend-search": "workspace:^",
-    "@frontend-platform/serverless-configuration": "workspace:^",
     "@module-federation/nextjs-mf": "^7.0.8",
     "@swarmion/serverless-helpers": "^0.28.2",
     "next": "13.4.17",
