@@ -5,8 +5,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "next build",
-    "destroy": "serverless remove",
     "deploy:dev": "./.env.dev sst deploy --stage dev",
+    "destroy": "serverless remove",
     "dev": "PORT=3001 sst bind next dev",
     "format-check": "prettier --check . ../../.prettierignore",
     "format-fix": "prettier --write . ../../.prettierignore",
@@ -14,16 +14,15 @@
     "lint-fix": "pnpm linter-base-config --fix",
     "lint-fix-all": "pnpm lint-fix .",
     "linter-base-config": "eslint --ext=js,ts",
+    "package-types": "tsc -p tsconfig.build.json",
     "start": "next start",
     "test": "nx run format-check && nx run test-linter && nx run test-type && nx run test-unit && nx run test-circular",
     "test-circular": "pnpm depcruise --validate .dependency-cruiser.js .",
     "test-linter": "pnpm linter-base-config .",
     "test-type": "tsc",
-    "test-unit": "vitest run --coverage --passWithNoTests",
-    "package-types": "tsc -p tsconfig.build.json"
+    "test-unit": "vitest run --coverage --passWithNoTests"
   },
   "dependencies": {
-    "@frontend-platform/serverless-configuration": "workspace:^",
     "@swarmion/serverless-helpers": "^0.28.2",
     "next": "13.4.19",
     "postcss": "8.4.28",

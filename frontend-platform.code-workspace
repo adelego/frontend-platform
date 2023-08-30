@@ -73,10 +73,6 @@
       "name": "frontend-platform root"
     },
     {
-      "path": "packages/serverless-configuration",
-      "name": "serverless configuration [library]"
-    },
-    {
       "path": "packages/frontend",
       "name": "frontend [library]"
     },

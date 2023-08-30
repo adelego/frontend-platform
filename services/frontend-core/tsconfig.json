@@ -19,9 +19,6 @@
   },
   "references": [
     {
-      "path": "../../packages/serverless-configuration/tsconfig.build.json"
-    },
-    {
       "path": "../frontend-search/tsconfig.build.json"
     }
   ],
