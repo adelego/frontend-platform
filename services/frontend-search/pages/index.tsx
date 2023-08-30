@@ -5,9 +5,7 @@ import { SearchBar } from '@/components/SearchBar';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const Home = (): React.JSX.Element => {
-  console.log('test');
-
+const Home = (): JSX.Element => {
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}

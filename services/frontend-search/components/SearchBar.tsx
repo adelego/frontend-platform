@@ -4,7 +4,7 @@ export interface SearchBarProps {
   lang?: 'en' | 'fr';
 }
 
-export type SearchBarType = React.FC<SearchBarProps>;
+export type SearchBarType = (props: SearchBarProps) => JSX.Element;
 
 export const SearchBar: SearchBarType = ({ lang }) => {
   const text = lang === 'fr' ? 'Barre de Recherche' : 'Search Bar';
